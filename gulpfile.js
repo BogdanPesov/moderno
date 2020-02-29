@@ -9,7 +9,7 @@ let gulp = require('gulp'),
     cssmin = require('gulp-cssmin');
 
 gulp.task('sass', function() {
-    return gulp.src('app/scss/style.scss') /* задаем путь к основному файлу */
+    return gulp.src('app/scss/**/*.scss') /* задаем путь к основному файлу */
         .pipe(sass({ outputStyle: 'compressed' })) /* задаем тип файла на выходе(сжатый) */
         .pipe(rename({ suffix: '.min' })) /* этот плагин для переименования файла, добавляем суффикс .min */
         .pipe(autoprefixer({ /* для того, чтобы была поддержка старых версий и все отображалось корректно, ибо на старых версиях display и некоторые другие свойства имеют другие названия */
@@ -60,7 +60,7 @@ gulp.task('browser-sync', function() { /* функция для того, что
 });
 
 gulp.task('watch', function() { /* функция для того, чтобы файл css обновлялся автоматически, если мы что-то поменяли в scss */
-    gulp.watch('app/scss/style.scss', gulp.parallel('sass')) /* watch то есть смотрит за файлом, к которому мы указали путь и дальше обновляет наш файл css (parallel('sass')) */
+    gulp.watch('app/scss/**/*.scss', gulp.parallel('sass')) /* watch то есть смотрит за файлом, к которому мы указали путь и дальше обновляет наш файл css (parallel('sass')), тут мы поменяли путь от файла к целой папке, за которой нужно следить*/
     gulp.watch('app/*.html', gulp.parallel('html')) /* следит за файлом html и обновляет страницу, если там обновление */
     gulp.watch('app/js/*.js', gulp.parallel('js')) /* следит за файлом js и обновляет страницу, если там обновление  */
 });
