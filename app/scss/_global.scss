@@ -8,6 +8,11 @@ html {
     box-sizing: inherit;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 a {
     display: inline-block;
     text-decoration: none;
@@ -19,6 +24,25 @@ li {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
 }
 
 body {
@@ -47,6 +71,10 @@ body {
     }
 }
 
+.page-content {
+    background-color: $grey;
+}
+
 .title {
     text-align: center;
     color: $bg;
@@ -59,4 +87,35 @@ body {
 .rate-star {
     display: inline-block;
     margin-right: 13px;
+}
+
+.breadcrumbs {
+    &__inner {
+        padding: 45px 0px 40px;
+    }
+    &__list {
+        li {
+            display: inline-block;
+            position: relative;
+            &+li {
+                padding-left: 24px;
+                &::before {
+                    content: '-';
+                    position: absolute;
+                    color: $green;
+                    left: 8px;
+                }
+            }
+            &:last-child {
+                /* прописали еще и спану цвет, вдруг бэкэндер поменяет ссылку на спан, потому что некоторые так делают */
+                a,
+                span {
+                    color: $bg;
+                }
+            }
+        }
+        a {
+            color: #b0bec5;
+        }
+    }
 }
