@@ -46,6 +46,7 @@ li {
 }
 
 body {
+    overflow-x: hidden;
     font-family: 'Roboto-Regular', sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -117,5 +118,18 @@ body {
         a {
             color: #b0bec5;
         }
+    }
+}
+
+.angle-right {
+    position: relative;
+    padding-left: 15px;
+    &::before {
+        font-family: 'icomoon';
+        content: "\f105";
+        position: absolute;
+        color: $green;
+        left: 0;
+        font-size: 14px;
     }
 }
