@@ -25,6 +25,7 @@
     "slick-carousel": "^1.8.1"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "gulp-autoprefixer": "^7.0.1"
   }
 }

@@ -13,7 +13,7 @@
 
 <body>
     <div class="wrapper">
-        <div class="content page-content">
+        <sec class="content page-content">
             <!-- header -->
             <header class="header">
                 <div class="header__top">
@@ -260,113 +260,171 @@
             </header>
             <!-- end header -->
 
-
-            <!-- start footer -->
-        </div>
-        <footer class="footer">
-            <div class="footer__content">
+            <!-- start search -->
+            <section class="search page-search" style="background-image: url(/images/search-bg.jpg);">
                 <div class="container">
-                    <div class="footer__inner">
-                        <div class="footer__col footer__col-adress">
-                            <div class="footer__col-title">
-                                About Company
+                    <div class="search__inner">
+                        <div class="search__inner-text">
+                            Premium WordPress Themes, Web Templates and Many More ...
+                        </div>
+                        <div class="search__inner-form">
+                            <form>
+                                <input type="text" placeholder="Search Your Keywords . . ." required>
+                                <button type="submit">
+                                    <img src="images/icons/search.png" alt="">
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end search -->
+
+
+            <!-- start breadcrumbs -->
+            <div class="breadcrumbs">
+                <div class="container">
+                    <div class="breadcrumbs__inner">
+                        <ul class="breadcrumbs__list">
+                            <li><a href="#">Home</a></li>
+                            <li><span>404 Page</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end breadcrumbs -->
+
+            <!-- start 404 -->
+            <section class="page-404">
+                <div class="container">
+                    <div class="page-404__wrapper">
+                        <div class="page-404__head">
+                            Error Page
+                        </div>
+                        <div class="page-404__inner">
+                            <div class="page-404__404">
+                                404
                             </div>
-                            <div class="footer__col-text">
-                                Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim digniSuspen disse.Fusce sit amet urna iat.Praesent vel rutrum purus.
+                            <div class="page-404__title">
+                                Sorry Page Was Not Found
                             </div>
-                            <div class="footer__info">
-                                PO Box 16122 Collins Street West Victoria 8007 Australia
+                            <div class="page-404__text">
+                                The page you are looking is not available or has been removed. Try going to Home Page by using the button below.
                             </div>
-                            <a href="tel:61383766284" class="footer__info footer__info-phone">
+                            <a href="#" class="page-404__link">
+                                Go To Home Page
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end 404 -->
+            <!-- start footer -->
+    </div>
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__col footer__col-adress">
+                        <div class="footer__col-title">
+                            About Company
+                        </div>
+                        <div class="footer__col-text">
+                            Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim digniSuspen disse.Fusce sit amet urna iat.Praesent vel rutrum purus.
+                        </div>
+                        <div class="footer__info">
+                            PO Box 16122 Collins Street West Victoria 8007 Australia
+                        </div>
+                        <a href="tel:61383766284" class="footer__info footer__info-phone">
                             +61 3 8376 6284
                         </a>
+                    </div>
+                    <div class="footer__col footer__col-menu">
+                        <div class="footer__col-title">
+                            Join Our Community
                         </div>
-                        <div class="footer__col footer__col-menu">
-                            <div class="footer__col-title">
-                                Join Our Community
-                            </div>
-                            <ul class="footer__col-list">
-                                <li>
-                                    <a href="#">Home</a>
-                                </li>
-                                <li>
-                                    <a href="#">Forums</a>
-                                </li>
-                                <li>
-                                    <a href="#">Become an Author</a>
-                                </li>
-                                <li>
-                                    <a href="#">Community Meetups</a>
-                                </li>
-                                <li>
-                                    <a href="#">Become an Affiliate</a>
-                                </li>
-                            </ul>
+                        <ul class="footer__col-list">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Forums</a>
+                            </li>
+                            <li>
+                                <a href="#">Become an Author</a>
+                            </li>
+                            <li>
+                                <a href="#">Community Meetups</a>
+                            </li>
+                            <li>
+                                <a href="#">Become an Affiliate</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__col footer__col-menu">
+                        <div class="footer__col-title">
+                            Need Help?
                         </div>
-                        <div class="footer__col footer__col-menu">
-                            <div class="footer__col-title">
-                                Need Help?
-                            </div>
-                            <ul class="footer__col-list">
-                                <li>
-                                    <a href="#">Help Center</a>
-                                </li>
-                                <li>
-                                    <a href="#">Foxtar Market Terms</a>
-                                </li>
-                                <li>
-                                    <a href="#">Author Terms</a>
-                                </li>
-                                <li>
-                                    <a href="#">Foxtar Licenses</a>
-                                </li>
-                                <li>
-                                    <a href="#">Contact Us</a>
-                                </li>
-                            </ul>
+                        <ul class="footer__col-list">
+                            <li>
+                                <a href="#">Help Center</a>
+                            </li>
+                            <li>
+                                <a href="#">Foxtar Market Terms</a>
+                            </li>
+                            <li>
+                                <a href="#">Author Terms</a>
+                            </li>
+                            <li>
+                                <a href="#">Foxtar Licenses</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__col footer__col-social">
+                        <div class="footer__col-title">
+                            Follow Us On
                         </div>
-                        <div class="footer__col footer__col-social">
-                            <div class="footer__col-title">
-                                Follow Us On
+                        <ul class="footer__social-link">
+                            <li>
+                                <a class="link-facebook" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="link-twitter" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="link-youtube" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="link-interest" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="link-linkedin" href="#"></a>
+                            </li>
+                        </ul>
+                        <div class="footer__form">
+                            <div class="footer__form-title">
+                                Newsletter Sign Up!
                             </div>
-                            <ul class="footer__social-link">
-                                <li>
-                                    <a class="link-facebook" href="#"></a>
-                                </li>
-                                <li>
-                                    <a class="link-twitter" href="#"></a>
-                                </li>
-                                <li>
-                                    <a class="link-youtube" href="#"></a>
-                                </li>
-                                <li>
-                                    <a class="link-interest" href="#"></a>
-                                </li>
-                                <li>
-                                    <a class="link-linkedin" href="#"></a>
-                                </li>
-                            </ul>
-                            <div class="footer__form">
-                                <div class="footer__form-title">
-                                    Newsletter Sign Up!
-                                </div>
-                                <form>
-                                    <input type="text" placeholder="E-mail Address">
-                                    <button type="submit"></button>
-                                </form>
-                            </div>
+                            <form>
+                                <input type="text" placeholder="E-mail Address">
+                                <button type="submit"></button>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer__copy">
-                <div class="container">
-                    <div class="footer__copy-text">
-                        © 2017 Foxtar market place. Trademarks and brands are the property of their respective owners.
-                    </div>
+        </div>
+        <div class="footer__copy">
+            <div class="container">
+                <div class="footer__copy-text">
+                    © 2017 Foxtar market place. Trademarks and brands are the property of their respective owners.
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
     </div>
     <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
     <script src="js/libs.min.js "></script>
