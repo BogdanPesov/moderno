@@ -1,0 +1,141 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: $text;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: $text;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-fluid {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+@media(max-width: 720px) {
+    .container-fluid {
+        padding: 0 15px;
+    }
+}
+
+.page-content {
+    background-color: $grey;
+}
+
+.title {
+    text-align: center;
+    color: $bg;
+    @include f700;
+    line-height: 60px;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.rate-star {
+    display: inline-block;
+    margin-right: 13px;
+}
+
+.breadcrumbs {
+    &__inner {
+        padding: 45px 0px 40px;
+        overflow: hidden;
+        width: 1200px;
+    }
+    &__list {
+        li {
+            display: inline-block;
+            position: relative;
+            &+li {
+                padding-left: 24px;
+                &::before {
+                    content: '-';
+                    position: absolute;
+                    color: $green;
+                    left: 8px;
+                }
+            }
+            &:last-child {
+                /* прописали еще и спану цвет, вдруг бэкэндер поменяет ссылку на спан, потому что некоторые так делают */
+                a,
+                span {
+                    color: $bg;
+                }
+            }
+        }
+        a {
+            color: #b0bec5;
+        }
+    }
+}
+
+.angle-right {
+    position: relative;
+    padding-left: 15px;
+    &::before {
+        font-family: 'icomoon';
+        content: "\f105";
+        position: absolute;
+        color: $green;
+        left: 0;
+        font-size: 14px;
+    }
+}
+
+#modal {
+    display: none;
+}

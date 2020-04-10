@@ -9,7 +9,7 @@ let gulp = require('gulp'),
     cssmin = require('gulp-cssmin');
 
 gulp.task('sass', function() {
-    return gulp.src('app/scss/style.scss') /* задаем путь к основному файлу */
+    return gulp.src('app/scss/**/*.scss') /* задаем путь к основному файлу */
         .pipe(sass({ outputStyle: 'compressed' })) /* задаем тип файла на выходе(сжатый) */
         .pipe(rename({ suffix: '.min' })) /* этот плагин для переименования файла, добавляем суффикс .min */
         .pipe(autoprefixer({ /* для того, чтобы была поддержка старых версий и все отображалось корректно, ибо на старых версиях display и некоторые другие свойства имеют другие названия */
@@ -23,7 +23,12 @@ gulp.task('style', function() {
     return gulp.src([
             'node_modules/normalize.css/normalize.css',
             'node_modules/slick-carousel/slick/slick.css',
-            'node_modules/magnific-popup/dist/magnific-popup.css'
+            'node_modules/magnific-popup/dist/magnific-popup.css',
+            'node_modules/rateyo/src/jquery.rateyo.css',
+            'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
+            'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
+            'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
+            'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css'
         ])
         .pipe(concat('libs.min.css')) /* вверху указали путь к двум файлам, а с помощью pipe объединили их в один и сразу же прописали название */
         .pipe(cssmin())
@@ -33,7 +38,12 @@ gulp.task('style', function() {
 gulp.task('script', function() {
     return gulp.src([
             'node_modules/slick-carousel/slick/slick.js',
-            'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
+            'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+            'node_modules/mixitup/dist/mixitup.js',
+            'node_modules/rateyo/src/jquery.rateyo.js',
+            'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+            'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+            'node_modules/jquery-form-styler/dist/jquery.formstyler.js'
         ])
         .pipe(concat('libs.min.js')) /* вверху указали путь к двум файлам, а с помощью pipe объединили их в один и сразу же прописали название */
         .pipe(uglify()) /* минифицируем */
@@ -60,7 +70,7 @@ gulp.task('browser-sync', function() { /* функция для того, что
 });
 
 gulp.task('watch', function() { /* функция для того, чтобы файл css обновлялся автоматически, если мы что-то поменяли в scss */
-    gulp.watch('app/scss/style.scss', gulp.parallel('sass')) /* watch то есть смотрит за файлом, к которому мы указали путь и дальше обновляет наш файл css (parallel('sass')) */
+    gulp.watch('app/scss/**/*.scss', gulp.parallel('sass')) /* watch то есть смотрит за файлом, к которому мы указали путь и дальше обновляет наш файл css (parallel('sass')), тут мы поменяли путь от файла к целой папке, за которой нужно следить*/
     gulp.watch('app/*.html', gulp.parallel('html')) /* следит за файлом html и обновляет страницу, если там обновление */
     gulp.watch('app/js/*.js', gulp.parallel('js')) /* следит за файлом js и обновляет страницу, если там обновление  */
 });
